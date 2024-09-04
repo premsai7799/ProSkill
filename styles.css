@@ -1,0 +1,218 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e0c689;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #434a42;
+    color: white;
+    position: relative;
+}
+
+.title, .title-mobile {
+    margin-right:30px;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 10px;
+    border-left: 0.25rem solid #ffe1a8;
+    padding: 5px;
+}
+
+.title{
+    white-space: nowrap;
+}
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border-right: 0.25rem solid #ffe1a8;
+}
+
+
+
+.menu-options {
+    display: none;
+    position: absolute;
+    background-color: #434a42;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.menu-options li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-options li:hover {
+    background-color: #555;
+}
+
+.welcome-message{
+    font-size: 30px;
+}
+
+.language-display {
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 100px;
+    position: sticky;
+    border-bottom: 3px solid #626c66;
+    border-radius: 50px;
+    
+}
+
+.levels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.level-pill {
+    padding: 10px 20px;
+    background-color: #aca885;
+    border: 2px solid  #434a42;
+    color: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 0 1 calc(20% - 10px); /* Make each pill max 5 per row */
+    text-align: center;
+    margin: 5px;
+    display: block;
+}
+
+.level-pill.selected {
+    background-color: #626c66;
+    border: 2px solid #434a42;
+    color: white;
+    transform: scale(1.1);
+    white-space: nowrap;
+}
+
+.level-navigation {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.level-navigation.show {
+    opacity: 1;
+}
+
+.level-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#prev-level{
+    border-radius: 50px 0 0 50px;
+}
+
+#next-level{
+    border-radius: 0 50px 50px 0;
+}
+.welcome-message{
+    font-size: 20px;
+}
+
+#prev-level, #next-level {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: #626c66;
+    border: 2px solid #434a42;
+}
+
+.level-content {
+    text-align: center;
+    background-color: #e1ca96;
+    padding: 0 25px;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 2px solid #626c66;
+    border-radius: 50px;
+    margin:0 20px;
+    box-shadow:-5px -5px 10px  #aca885 ,5px 5px 20px rgb(0, 0, 0);
+}
+
+.level-content > h2 {
+    border-bottom:2px dashed #434a42;
+}
+
+.level-content > pre{
+    text-wrap: wrap;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #434a42;
+    color: white;
+    margin-top: auto;
+}
+
+.level-controls button {
+  display: none; /* hide prev and next buttons initially */
+}
+
+.level-controls.show-buttons button {
+  display: inline-block; /* show buttons when .show-buttons class is added */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .title {
+        display: none;
+    }
+    .title-mobile {
+        display: block;
+    }
+    .levels-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+    .title {
+        display: block;
+    }
+    .title-mobile {
+        display: none;
+    }
+    .levels-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

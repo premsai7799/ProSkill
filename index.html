@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Skill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        
+        <div class="menu">
+            <button class="menu-button">Menu</button>
+            <ul class="menu-options">
+                <li data-lang="HTML">HTML</li>
+                <li data-lang="CSS">CSS</li>
+                <li data-lang="JavaScript">JavaScript</li>
+                <li data-lang="SQL">SQL</li>
+                <li data-lang="Python">Python</li>
+                <li data-lang="C++">C++</li>
+            </ul>
+        </div>
+         <marquee class="welcome-message">Select your language in the menu</marquee>
+        <div class="title">Pro Skill</div>
+        <div class="title-mobile">PS</div>
+    </header>
+
+    <!-- Language Selection and Level Navigation -->
+    <main>
+        <div class="language-display"></div>
+        <div class="level-controls">
+                <button id="prev-level">Prev</button>
+                <div class="levels-container">
+            <!-- Pill shaped levels will be injected here via JavaScript -->
+            </div>
+                <button id="next-level">Next</button>
+            </div>
+        
+        <div class="level-navigation hidden">
+            <div class="level-content">
+                    <!-- Content related to the selected level will be injected here -->
+                </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+            © 2024 Prem Sai. All rights reserved.
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
