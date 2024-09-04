@@ -153,7 +153,7 @@ header {
 .level-content {
     text-align: center;
     background-color: #e1ca96;
-    padding: 0;
+    padding: 0 20px;
     animation: fadeIn 0.5s ease-in-out;
     border: 2px solid #626c66;
     border-radius: 50px;
